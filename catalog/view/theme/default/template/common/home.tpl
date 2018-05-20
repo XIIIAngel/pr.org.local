@@ -12,3 +12,7 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
+
+<script>
+    $("a:contains('Купить пружины')").css('background-color', '#db1a22');
+</script>

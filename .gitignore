@@ -4,3 +4,4 @@ image/*
 system/storage
 catalog/view/theme/default/.idea
 /catalog/view/theme/default/img/
+*.jpg
