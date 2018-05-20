@@ -33,6 +33,7 @@ RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
 ### Additional Settings that may need to be enabled for some servers
 ### Uncomment the commands by removing the # sign in front of it.
 ### If you get an "Internal Server Error 500" after enabling any of the following settings, restore the # as this means your host doesn't allow that.
+### XIIIAngel shit write here !
 
 # 1. If your cart only allows you to add one item at a time, it is possible register_globals is on. This may work to disable it:
 # php_flag register_globals off
