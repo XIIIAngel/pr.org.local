@@ -966,7 +966,7 @@ ul,li, h1, .nazvatabl p {
 }
 .nazvatabl{
     float:left;
-	width: 365px;
+    width: 374px;
     font-size:18px;
     text-align:center;
     border-right: 1px dotted #979191;
@@ -988,7 +988,7 @@ ul,li, h1, .nazvatabl p {
     float: left;
     text-align: center;
     font-size: 18px;
-	width: 235px;
+    width: 233px;
 	padding-left: 15px;
 }
 
