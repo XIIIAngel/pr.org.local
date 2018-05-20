@@ -130,7 +130,7 @@
 
             <?php if(stripos($category_name, 'пружины сжатия') === false) { ?>
             <p class="pruzhiny">Оптовую партию пружин растяжения можно заказать на странице <a href="http://pruzhiny.com.ua/pruzhiny_rastyazheniya.html" target="_blank">Pruzhiny.com.ua</a>.</p>
-            <p class="centr"><img src="http://pr.org.local/image/catalog/raschet_pruzhiny_rastyageniya.jpg" alt="пружина на растяжение"><img src="http://pr.org.local/image/catalog/orient.jpg" alt="пружина растяжения с зацепами"></p>
+            <p class="centr"><img src="http://pr.org.local/image/catalog/raschet_pruzhiny_rastyageniya.jpg" alt="пружина на растяжение"><img src="http://pr.org.local/image/catalog/orient.jpg" alt="пружина растяжения с зацепами"></p><br>
             <?php } else { ?>
             <p class="pruzhiny">Оптовую партию пружин сжатия можно заказать на странице <a href="http://pruzhiny.com.ua/pruzhiny_szhatiya.html" target="_blank">Pruzhiny.com.ua</a>.</p>
             <p class="centr"><img src="http://pr.org.local/image/catalog/raschet_pruzhiny_sgatiya.jpg" alt="пружина на сжатие"></p>

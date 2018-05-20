@@ -432,8 +432,16 @@ class ControllerProductCategory extends Controller
             if (isset($this->request->get['limit'])) {
                 $url .= '&limit=' . $this->request->get['limit'];
             }
-            if (isset($this->request->get['pr'])) {
-                $url .= '&pr=' . $this->request->get['pr'];
+            if (isset($this->request->get['d'])) {
+                $url .= '&d=' . $this->request->get['d'];
+            }
+
+            if (isset($this->request->get['D1'])) {
+                $url .= '&D1=' . $this->request->get['D1'];
+            }
+
+            if (isset($this->request->get['L'])) {
+                $url .= '&L=' . $this->request->get['L'];
             }
 
             $pagination = new Pagination();
