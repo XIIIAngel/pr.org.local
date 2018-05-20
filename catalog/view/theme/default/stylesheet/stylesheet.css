@@ -375,7 +375,8 @@ footer h5 {
 	transform: rotate(-45deg);
 }
 .pagination {
-	margin: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 /* buttons */
 .buttons {
@@ -1308,7 +1309,7 @@ h2, .centr{
 
 }
 
-/*---------- лучше не чего не трогать тут -----------*/
+/*---------- гавнокод -----------*/
 
 .tablvidu img {
 	width: 381px;
@@ -1347,4 +1348,13 @@ h1 {
     width: 200px;
     position: relative;
     top: -25px;
+}
+.pagination > li > a {
+    background-color: #ffffff;
+    color: #979191;
+    border-color: #979191;
+}
+.pagination .active > span{
+    background-color: #979191;
+    border-color: #979191;;
 }

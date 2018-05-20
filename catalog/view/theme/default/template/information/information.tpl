@@ -21,5 +21,5 @@
 <?php echo $footer; ?>
 
 <script>
-    $("a:contains('<?php echo array_values(array_slice($breadcrumbs, -1))[0][text]; ?>')").css('background-color', 'red');
+    $("a:contains('<?php echo array_values(array_slice($breadcrumbs, -1))[0][text]; ?>')").css('background-color', '#db1a22');
 </script>

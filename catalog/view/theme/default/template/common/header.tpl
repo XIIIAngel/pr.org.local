@@ -57,7 +57,7 @@
 
     <div class="menu">
       <ul>
-        <li><a href="/" class="tut">Купить пружины</a></li>
+        <li><a href="/">Купить пружины</a></li>
         <li><a href="/o-nas">О нас</a></li>
         <li><a href="/izgotovlenie-prugin">Изготовление пружин</a></li>
         <li><a href="/kak-zakazat">Как заказать</a></li>
