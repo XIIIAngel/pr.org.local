@@ -1358,3 +1358,9 @@ h1 {
     background-color: #979191;
     border-color: #979191;;
 }
+
+/* ---------- PRIVATIK BLOCK ---------- */
+#disabled {
+	background: grey !important;
+	box-shadow: unset !important;
+}

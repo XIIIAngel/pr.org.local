@@ -299,6 +299,7 @@ class ControllerProductCategory extends Controller
                 $data['products'][] = array(
                     'product_id' => $result['product_id'],
                     'thumb' => $image,
+                    'stock_status' => $result['stock_status'],
                     'short_name' => explode('(Артикул: ', $result['name'])[0],
                     'articul' => substr(explode('(Артикул: ', $result['name'])[1], 0, -1),
                     'price' => $price,

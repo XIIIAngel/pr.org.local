@@ -121,11 +121,18 @@
                         <p></p>
                     </div>
                     <div class="cenatabl">
-                        <p style="margin-bottom: 30px;">Артикул - <span class="red"</span><?php echo $product['articul']; ?></p>
+                        <p style="margin-bottom: 30px;">Артикул - <span
+                                    class="red"</span><?php echo $product['articul']; ?></p>
                         <p>Цена на 1 шт. - <span class="red"><?php echo $product['price']; ?></span>
-                            <button id="button-cart" style="margin-top: 30px;" class="buy type=" button
-                            " onclick="cart.add('<?php echo $product['product_id']; ?>',
-                            '<?php echo $product['minimum']; ?>');"><?php echo $button_cart; ?></button>
+
+                            <?php if(strcasecmp($product['stock_status'], 'Нет в наличии') == 0) { ?>
+                                <button id="disabled" style="margin-top: 30px;" class="buy" disabled>Нет в наличии</button>
+                            <?php } else { ?>
+                                <button id="button-cart" style="margin-top: 30px;" class="buy" button
+                                " onclick="cart.add('<?php echo $product['product_id']; ?>',
+                                '<?php echo $product['minimum']; ?>');"><?php echo $button_cart; ?></button>
+                            <?php } ?>
+
                         </p>
                     </div>
                 </div>
