@@ -775,7 +775,7 @@ body{
 .menu{
     background: #979191;
     font-size:16px;
-    padding:0 35px;
+    padding:0 32px;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
 }
@@ -787,7 +787,7 @@ ul li{
 ul li a{
     color: #fff;
     text-decoration: none;
-    padding: 10px 22px;
+    padding: 10px 19px;
     display: inline-block;
 }
 
@@ -1155,7 +1155,7 @@ h2, .centr{
 }
 
 .knopkasubmit{
-    margin:10px 0;
+    margin-top:10px;
     font-size:14px;
     background: #ee3444;
     color:#fff;

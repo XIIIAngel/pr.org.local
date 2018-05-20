@@ -185,7 +185,7 @@ class ModelSaleOrder extends Model {
 				$sql .= " WHERE (" . implode(" OR ", $implode) . ")";
 			}
 		} else {
-			$sql .= " WHERE o.order_status_id > '0'";
+			$sql .= " WHERE o.order_status_id >= '0'";
 		}
 
 		if (!empty($data['filter_order_id'])) {
