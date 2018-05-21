@@ -26,7 +26,8 @@
                     <div class="panel-body">
 
 
-                        <form id="cartform" action="index.php?route=checkout/payment_method/save" method="post" enctype="multipart/form-data">
+                        <form id="cartform" action="index.php?route=checkout/payment_method/save" method="post"
+                              enctype="multipart/form-data">
                             <div class="center-block" style="width: 500px">
                                 <input placeholder="ФИО получателя" class="dolgiy" name="username" type="text">
                                 <br>
@@ -103,7 +104,19 @@
         <?php echo $column_right; ?></div>
 </div>
 <script type="text/javascript">
-    $(document).delegate('#form_submit', 'click', function () {
+    $(document).delegate('#form_submit', 'click', formsubmit);
+
+    function formsubmit() {
+        if ($('[name="username"]').val() == '') {
+            badValue('[name="username"]');
+            return;
+        }
+
+        if ($('[name="phone"]').val() == '') {
+            badValue('[name="phone"]');
+            return;
+        }
+
         $.ajax({
             url: 'index.php?route=checkout/confirm',
             type: 'post',
@@ -117,25 +130,12 @@
                 }
             }
         });
+    }
 
-
-        // $.ajax({
-        //     url: 'index.php?route=checkout/payment_address',
-        //     dataType: 'html',
-        //     complete: function () {
-        //         $('#button-payment-method').button('reset');
-        //     },
-        //     success: function (html) {
-        //         $('#collapse-checkout-confirm .panel-body').html(html);
-        //
-        //         $('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-confirm" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_confirm; ?> <i class="fa fa-caret-down"></i></a>');
-        //
-        //         $('a[href=\'#collapse-checkout-confirm\']').trigger('click');
-        //     },
-        //     error: function (xhr, ajaxOptions, thrownError) {
-        //         alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        //     }
-        // });
-    });
-    //--></script>
+    function badValue(element) {
+        for (i = 1; i < 4; i++) {
+            $(element).animate({'marginLeft': '-5px'}, 50 - i * 10).animate({'marginLeft': '5px'}, 50 - i * 10).animate({'marginLeft': '0px'}, 50 - i * 10).select();
+        }
+    }
+</script>
 <?php echo $footer; ?>
