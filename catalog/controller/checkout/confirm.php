@@ -7,7 +7,7 @@ class ControllerCheckoutConfirm extends Controller
 
         $redirect = '';
         // Validate cart has products and has stock.
-        if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
+        if (!$this->cart->hasProducts()) {
             $redirect = $this->url->link('checkout/cart');
         }
 
@@ -20,7 +20,7 @@ class ControllerCheckoutConfirm extends Controller
             $total = 0;
             foreach ($products as $product) {
                 $s .= "<tr><td>" . ($i++) . "</td><td>{$product['name']}</td><td>{$product['quantity']} шт</td><td>{$product['price']}</td></tr>";
-                $total += intval($product['price']);
+                $total += intval($product['price']) * intval($product['quantity']);
             }
 
             $s .= '</table>';

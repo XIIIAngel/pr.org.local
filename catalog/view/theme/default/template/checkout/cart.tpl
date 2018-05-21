@@ -15,11 +15,11 @@
         <button type="button" class="close" data-dismiss="alert">&times;</button>
     </div>
     <?php } ?>
-    <?php if ($error_warning) { ?>
+    <!-- <?php if ($error_warning) { ?>
     <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
         <button type="button" class="close" data-dismiss="alert">&times;</button>
     </div>
-    <?php } ?>
+    <?php } ?> -->
     <div class="row"><?php echo $column_left; ?>
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
@@ -51,9 +51,9 @@
                                 <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-thumbnail" /></a>
                                 <?php } ?></td>
                             <td class="text-left"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-                                <?php if (!$product['stock']) { ?>
+                                <!-- <?php if (!$product['stock']) { ?>
                                 <span class="text-danger">***</span>
-                                <?php } ?>
+                                <?php } ?> -->
                                 <?php if ($product['option']) { ?>
                                 <?php foreach ($product['option'] as $option) { ?>
                                 <br />
