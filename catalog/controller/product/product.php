@@ -292,6 +292,7 @@ class ControllerProductProduct extends Controller {
 			}*/
 
             $data['stock'] = $product_info['stock_status'];
+            $data['stock_quantity'] = $product_info['quantity'];
 
 			$this->load->model('tool/image');
 

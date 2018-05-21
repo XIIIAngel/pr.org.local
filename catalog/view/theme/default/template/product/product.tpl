@@ -29,17 +29,27 @@
                     </table>
 
                     <div class="nalkupit">
-                        <p style="margin: 5px 0 0;"><img src="http://pr.org.local/image/catalog/nal.png" alt="пружины в наличии"> <span
-                                    class="textnal"><?php echo $stock; ?></span></p>
+                        <p style="margin: 5px 0 0;"><img src="http://pr.org.local/image/catalog/nal.png"
+                                                         alt="пружины в наличии"> <span
+                                    class="textnal"><?php echo $stock; if(strcasecmp($stock, 'В наличии') == 0) { echo ' ' . $stock_quantity . ' шт'; }?></span></p>
 
                         <div class="form-group">
                             Цена на 1 шт. - <span style="margin-right: 30px;" class="red"><?php echo $price; ?></span>
 
-                            <input style="display: inline; width:25px; height: 23px; padding: 0; border-radius: 0" type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" /> шт.
 
+                            <input style="display: inline; width:25px; height: 23px; padding: 0; border-radius: 0"
+                                   type="text" name="quantity" value="<?php echo $minimum; ?>" size="2"
+                                   id="input-quantity" class="form-control"/> шт.
                             <input type="hidden" name="product_id" value="<?php echo $product_id; ?>"/>
+
+                            <?php if(strcasecmp($stock, 'Нет в наличии') == 0) { ?>
+                            <button type="button" id="disabled" data-loading-text="<?php echo $text_loading; ?>"
+                                    class="buy" disabled><?php echo $button_cart; ?></button>
+                            <?php } else { ?>
                             <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>"
                                     class="buy"><?php echo $button_cart; ?></button>
+                            <?php } ?>
+
                         </div>
                     </div>
                 </div>
@@ -129,11 +139,17 @@
             <?php } ?>
 
             <?php if(stripos($category_name, 'пружины сжатия') === false) { ?>
-            <p class="pruzhiny">Оптовую партию пружин растяжения можно заказать на странице <a href="http://pruzhiny.com.ua/pruzhiny_rastyazheniya.html" target="_blank">Pruzhiny.com.ua</a>.</p>
-            <p class="centr"><img src="http://pr.org.local/image/catalog/raschet_pruzhiny_rastyageniya.jpg" alt="пружина на растяжение"><img src="http://pr.org.local/image/catalog/orient.jpg" alt="пружина растяжения с зацепами"></p><br>
+            <p class="pruzhiny">Оптовую партию пружин растяжения можно заказать на странице <a
+                        href="http://pruzhiny.com.ua/pruzhiny_rastyazheniya.html" target="_blank">Pruzhiny.com.ua</a>.
+            </p>
+            <p class="centr"><img src="http://pr.org.local/image/catalog/raschet_pruzhiny_rastyageniya.jpg"
+                                  alt="пружина на растяжение"><img src="http://pr.org.local/image/catalog/orient.jpg"
+                                                                   alt="пружина растяжения с зацепами"></p><br>
             <?php } else { ?>
-            <p class="pruzhiny">Оптовую партию пружин сжатия можно заказать на странице <a href="http://pruzhiny.com.ua/pruzhiny_szhatiya.html" target="_blank">Pruzhiny.com.ua</a>.</p>
-            <p class="centr"><img src="http://pr.org.local/image/catalog/raschet_pruzhiny_sgatiya.jpg" alt="пружина на сжатие"></p>
+            <p class="pruzhiny">Оптовую партию пружин сжатия можно заказать на странице <a
+                        href="http://pruzhiny.com.ua/pruzhiny_szhatiya.html" target="_blank">Pruzhiny.com.ua</a>.</p>
+            <p class="centr"><img src="http://pr.org.local/image/catalog/raschet_pruzhiny_sgatiya.jpg"
+                                  alt="пружина на сжатие"></p>
             <?php } ?>
             <?php echo $content_bottom; ?></div>
         <?php echo $column_right; ?></div>
@@ -204,7 +220,7 @@
                 if (json['success']) {
                     $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
-                    $('#cart > li > a').html('<span id="cart-total">Корзина (' + json['total'] +  ')</span>');
+                    $('#cart > li > a').html('<span id="cart-total">Корзина (' + json['total'] + ')</span>');
                     // $('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
 
                     $('html, body').animate({scrollTop: 0}, 'slow');
