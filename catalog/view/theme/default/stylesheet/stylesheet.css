@@ -925,6 +925,13 @@ ul,li, h1, .nazvatabl p {
     line-height: 25px;
 }
 
+.diam a:active {
+	background:#fff;
+	color:#000;
+	padding:3px 4px;
+	font-weight: bold;
+}
+
 .diam a:hover{
     background:#fff;
     color:#000;
@@ -1268,6 +1275,7 @@ h1 {
 .input-group-btn {
 	display: block;
 }
+
 @media screen and (max-width: 576px) {
 	.container {
 		width: 540px!important;
