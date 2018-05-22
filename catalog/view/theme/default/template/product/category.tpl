@@ -16,7 +16,7 @@
 
 
         <div id="content" class="<?php echo $class; ?>">
-            <h1><?php echo $heading_title; ?></h1>
+            <div class="container" style="background: white;"><h1><?php echo $heading_title; ?></h1>
             <?php if ($thumb || $description) { ?>
             <div class="row">
                 <?php if ($thumb) { ?>
@@ -24,7 +24,7 @@
                                            title="<?php echo $heading_title; ?>" class="img-thumbnail"/></div>
                 <?php } ?>
                 <?php if ($description) { ?>
-                <div class="col-sm-10"><?php echo $description; ?></div>
+                <div class="col-sm-12"><?php echo $description; ?></div>
                 <?php } ?>
             </div>
             <?php } ?>
@@ -107,34 +107,35 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="container">
                 <?php foreach ($products as $product) { ?>
-                <div class="tabls">
-                    <div class="fotovtabl"><a href="<?php echo $product['href']; ?>">
-                            <div class="div-img-tovar"><img class="img-tovar" src="<?php echo $product['thumb']; ?>"
+                <div class="tabls col-lg-12">
+                   <div class="row">
+                    <div class="fotovtabl col-lg-3 col-md-3 col-sm-12 col-xs-12"><a href="<?php echo $product['href']; ?>">
+                            <div class="div-img-tovar mx-auto"><img class="img-tovar" src="<?php echo $product['thumb']; ?>"
                                                             alt="<?php echo $product['name']; ?>"
                                                             title="<?php echo $product['name']; ?>"></div>
                         </a></div>
-                    <div class="nazvatabl">
+                    <div class="nazvatabl mx-auto col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <a href="<?php echo $product['href']; ?>"><?php echo $product['short_name']; ?></a>
                         <p class="texttabl"><?php echo $product['description']; ?></p>
                         <p></p>
                     </div>
-                    <div class="cenatabl">
-                        <p style="margin-bottom: 30px;">Артикул - <span
+                    <div class="cenatabl mx-auto col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <p>Артикул - <span
                                     class="red"</span><?php echo $product['articul']; ?></p>
-                        <p>Цена на 1 шт. - <span class="red"><?php echo $product['price']; ?></span>
+                        <p style="margin-right: -3px;">Цена на 1 шт. - <span class="red"><?php echo $product['price']; ?></span>
 
                             <?php if(strcasecmp($product['stock_status'], 'Нет в наличии') == 0) { ?>
-                                <button id="disabled" style="margin-top: 30px;" class="buy" disabled>Нет в наличии</button>
+                                <button id="disabled" style="margin-top: 10px;" class="buy" disabled>Нет в наличии</button>
                             <?php } else { ?>
-                                <button id="button-cart" style="margin-top: 30px;" class="buy" button
+                                <button id="button-cart" style="margin-top: 10px;" class="buy" button
                                 " onclick="cart.add('<?php echo $product['product_id']; ?>',
                                 '<?php echo $product['minimum']; ?>');"><?php echo $button_cart; ?></button>
                             <?php } ?>
 
                         </p>
-                    </div>
+                    </div></div>
                 </div>
 
                 <!-- <div class="product-layout product-list col-xs-12">
@@ -179,10 +180,10 @@
 
                 <?php } ?>
             </div>
-            <div class="row">
+            <div class="container"><div class="row">
                 <div class="col-sm-12 text-left text-center "><?php echo $pagination; ?></div>
                 <!--<div class="col-sm-6 text-right"><?php echo $results; ?></div>-->
-            </div>
+            </div></div>
             <?php } ?>
             <?php if (!$categories && !$products) { ?>
             <p><?php echo $text_empty; ?></p>
@@ -191,7 +192,7 @@
                                            class="btn btn-primary"><?php echo $button_continue; ?></a></div>
             </div>
             <?php } ?>
-            <?php echo $content_bottom; ?></div>
+            <?php echo $content_bottom; ?></div></div>
         <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>

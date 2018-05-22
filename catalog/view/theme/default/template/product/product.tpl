@@ -1,8 +1,8 @@
 <?php echo $header; ?>
 <div class="container">
     <ul class="breadcrumb">
-        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+        <?php for( $i= 0 ; $i < count($breadcrumbs) - 1 ; $i++ ) { ?>
+        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a></li>
         <?php } ?>
     </ul>
     <div class="row"><?php echo $column_left; ?>
@@ -16,14 +16,18 @@
         <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
 
 
-            <div class="text">
+            <div class="container" style="background: white"><div class="text">
                 <h1><?php echo $heading_title; ?></h1>
             </div>
             <div id="product">
 
-                <div class="fototovar"><img src="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"
-                                            alt="<?php echo $heading_title; ?>"/></div>
-                <div class="tabltovar">
+                <div class="row">
+
+                        <div class="fototovar mx-auto col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <img src="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"
+                                            alt="<?php echo $heading_title; ?>"/>
+                    </div>
+                <div class="tabltovar mx-auto col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <table class="tabli" cellspacing="0">
                         <?php echo $description; ?>
                     </table>
@@ -52,7 +56,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div></div>
             </div>
 
             <?php if ($products) { ?>
@@ -151,7 +155,7 @@
             <p class="centr"><img src="http://pr.org.local/image/catalog/raschet_pruzhiny_sgatiya.jpg"
                                   alt="пружина на сжатие"></p>
             <?php } ?>
-            <?php echo $content_bottom; ?></div>
+            <?php echo $content_bottom; ?></div></div>
         <?php echo $column_right; ?></div>
 </div>
 <script type="text/javascript"><!--

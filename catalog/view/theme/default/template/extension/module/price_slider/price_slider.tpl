@@ -11,7 +11,7 @@
 
 <div data-role="page" <?php if(isset($price_filter_status) && $price_filter_status == "0") {  echo 'style="display: none"';  }?>>
     <div data-role="header">
-        <h1>Фильтр пружин</h1>
+        <h1>Фильт по всем параметрам пружин</h1>
     </div>
 
     <div data-role="main" class="ui-content">
@@ -28,7 +28,7 @@
             <label for="L">Длина пружины (мм):</label>
             <input type="text" id="L" name="L" value="<?php if(isset($L)) { echo $L[0] . ';' . $L[1]; } ?>"/>
 
-            <input class="buy" style="margin-left: 395px;" id="button-filter" type="submit" value="<?php echo $button_filter; ?>">
+            <div class="row"><input style="display: block;" class="buy mx-auto" id="button-filter" type="submit" value="Показать результаты"></div>
         </form>
     </div>
 </div>

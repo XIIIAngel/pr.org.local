@@ -51,19 +51,26 @@
 
 <header>
   <div class="container">
-    <div class="logo">
-      <a href="/" class="plansetlogo"></a>
-    </div>
 
-    <div class="menu">
-      <ul>
-        <li><a href="/">Купить пружины</a></li>
-        <li><a href="/o-nas">О нас</a></li>
-        <li><a href="/izgotovlenie-prugin">Изготовление пружин</a></li>
-        <li><a href="/kak-zakazat">Как заказать</a></li>
-        <li><a href="/contacty">Контакты</a></li>
-        <?php echo $cart; ?>
-      </ul>
+    <a href="/" class="plansetlogo">
+      <img class="col-12" src="http://pr.org.local/image/catalog/logo.jpg" alt="">
+    </a>
+
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="menu">
+            <ul class="container">
+             <div class="text-center">
+              <li><a href="/">Купить пружины</a></li>
+              <li><a href="/o-nas">О нас</a></li>
+              <li><a href="/izgotovlenie-prugin">Изготовление пружин</a></li>
+              <li><a href="/kak-zakazat">Как заказать</a></li>
+              <li><a href="/contacty">Контакты</a></li>
+              <?php echo $cart; ?></div>
+            </ul>
+          </div>
+      </div>
     </div>
   </div>
 </header>

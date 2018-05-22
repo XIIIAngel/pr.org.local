@@ -28,8 +28,8 @@
         <?php } else { ?>
         <?php $class = 'col-sm-12'; ?>
         <?php } ?>
-        <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-            <h1 style="margin: 20px 0"><?php echo $heading_title; ?></h1>
+       <div class="container"> <div id="content" class="<?php echo $class; ?>" style="background: white"><?php echo $content_top; ?>
+            <h1><?php echo $heading_title; ?></h1>
 
             <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
                 <div class="table-responsive">
@@ -125,7 +125,7 @@
                 <div class="pull-right"><a href="<?php echo $checkout; ?>" class="btn btn-default"><?php echo $button_checkout; ?></a></div>
             </div>
 
-            <?php echo $content_bottom; ?></div>
+            <?php echo $content_bottom; ?></div></div>
         <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>

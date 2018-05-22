@@ -44,7 +44,7 @@ legend {
 	padding: 7px 0px
 }
 label {
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: normal;
 }
 select.form-control, textarea.form-control, input[type="text"].form-control, input[type="password"].form-control, input[type="datetime"].form-control, input[type="datetime-local"].form-control, input[type="date"].form-control, input[type="month"].form-control, input[type="time"].form-control, input[type="week"].form-control, input[type="number"].form-control, input[type="email"].form-control, input[type="url"].form-control, input[type="search"].form-control, input[type="tel"].form-control, input[type="color"].form-control {
@@ -377,6 +377,7 @@ footer h5 {
 .pagination {
     margin-top: 10px;
     margin-bottom: 5px;
+	display: block;
 }
 /* buttons */
 .buttons {
@@ -767,10 +768,6 @@ body{
     background: url(../img/body.jpg) repeat-x #d6d6d6;
 }
 
-.container{
-    width: 960px;
-    margin: 0 auto;
-}
 
 .menu{
     background: #979191;
@@ -781,7 +778,7 @@ body{
 }
 
 ul li{
-    display: inline-block;
+	display: inline-block;
 }
 
 ul li a{
@@ -821,12 +818,12 @@ ul,li, h1, .nazvatabl p {
 }
 
 .tablvidu{
-    float: left;
-	height: 266px;
-    width: 393px;
-    margin: 15px 28px;
+	height: auto;
+	width: auto;
+	margin: 15px 28px 0px;
     border: 4px solid #979191;
     border-radius: 10px;
+	display: inline-block;
 }
 
 .tablvidu:hover{
@@ -860,23 +857,24 @@ ul,li, h1, .nazvatabl p {
 
 .grad{
     background: url(../img/grad.jpg) repeat-x;
-    width:932px;
+	width: 0;
     height:7px;
-	margin-left: -16px;
+	margin-left: 0px;
 }
 
 .text{
-    background: #fff;
+	background: white;
     padding: 0 25px 30px 25px;
 }
 
 .text ul li{
-    width: 182px;
-    font-size:12px;
+    /*width: 182px;*/
+    /*font-size:12px;*/
+	display: block;
 }
 
 .bezpad{
-    margin:5px;
+    /*margin:5px;*/
 }
 
 .footer{
@@ -950,8 +948,6 @@ ul,li, h1, .nazvatabl p {
 }
 
 .tabls{
-    width:866px;
-	height: 190px;
     border: 2px solid #979191;
 	margin: 15px auto 0px;
     padding:20px;
@@ -962,15 +958,17 @@ ul,li, h1, .nazvatabl p {
 }
 
 .fotovtabl{
-    float:left;
+	border-right: 1px dotted #979191;
+	height: 150px;
 }
 .nazvatabl{
-    float:left;
+    display: block;
     width: 374px;
     font-size:18px;
     text-align:center;
     border-right: 1px dotted #979191;
-    border-left: 1px dotted #979191;
+	max-height: 290px;
+	margin-top: 10px;
 }
 
 .nazvatabl a{
@@ -985,7 +983,7 @@ ul,li, h1, .nazvatabl p {
 }
 
 .cenatabl{
-    float: left;
+	max-height: 150px;
     text-align: center;
     font-size: 18px;
     width: 233px;
@@ -998,7 +996,7 @@ ul,li, h1, .nazvatabl p {
 }
 
 .buy{
-    padding: 10px 30px;
+    padding: 10px 26px;
     color: #fff;
     background: #f91710;
     outline: none;
@@ -1070,15 +1068,16 @@ table.carttable td {empty-cells:show;}
 }
 
 .fototovar{
-    float:left;
-    width:400px;
-    height:300px;
-    margin-right: 20px;
+	display: inline-table;
+	width: auto;
+	height: auto;
+	margin-bottom: 10px;
 }
 
 .tabltovar{
 	display: inline-block;
-	width: 480px;
+	max-width: 490px;
+	padding: 0 0;
 }
 
 .tabli{
@@ -1128,9 +1127,14 @@ h2, .centr{
 }
 
 .logo{
-    background: url(../img/logo.jpg);
+    background: url(http://pr.org.local/image/catalog/logo.jpg);
     width:960px;
     height:150px;
+}
+img {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
 }
 .cotalog-produkt1{
 	background: url(../img/pruginy_sgatiya.jpg);
@@ -1160,6 +1164,7 @@ h2, .centr{
     background: #ee3444;
     color:#fff;
     padding: 15px 80px;
+	margin-bottom: 10px;
 }
 
 .bigleight{
@@ -1168,146 +1173,7 @@ h2, .centr{
     margin-right: 10px;
 }
 
-@media screen and (max-width:800px){
-    .contentkorzinu, .grad, .container{
-        max-width:480px;
-    }
 
-    .logo{
-        background: url(../img/logo480.jpg);
-        width:480px;
-        height:109px;
-    }
-
-    .menu{
-        text-align: center;
-    }
-
-    .menu ul li{
-        display:block;
-    }
-
-    .menu ul li a{
-        border-radius: 30px;
-    }
-
-    .vidu{
-        min-height:680px;
-    }
-
-    .text ul li{
-        width:143px;
-    }
-
-    .tabls{
-        max-width:385px;
-        height:430px;
-    }
-
-    .fotovtabl, .nazvatabl{
-        border-right:none;
-    }
-
-    .fotovtabl{
-        float:none;
-        margin:0px auto;
-        margin-bottom:10px;
-    }
-
-    .cenatabl{
-        float:none;
-        padding:0px;
-        margin:0px auto;
-    }
-
-    .fototovar{
-        float:none;
-        margin:0 auto;
-    }
-
-    .tabltovar{
-        float:none;
-        margin:5px auto;
-        width:400px;
-    }
-
-    .buy{
-        margin:0px;
-        padding:5px;
-    }
-
-    .bigleight{
-        float:none;
-    }
-
-    .dolgiy, .textarea{
-        max-width:350px;
-    }
-}
-
-@media screen and (max-width:480px){
-	.contentkorzinu, .grad, .container{
-		max-width:300px;
-	}
-    .logo{
-        background: url(../img/logo300.jpg);
-        width:300px;
-        height:68px;
-    }
-
-    .tablvidu{
-        max-width:298px;
-        margin:25px auto;
-        border:1px solid #979191;
-        border-radius:none;
-        height:220px;
-    }
-
-    .tablvidu:hover{
-        border: 1px solid #db1a22;
-    }
-
-    .tablvidu a img{
-        max-width: 98%;
-    }
-
-    .text ul li{
-        width:125px;
-    }
-
-    .tabls{
-        max-width:260px;
-        min-height:450px;
-        padding:5px;
-    }
-
-    .nazvatabl{
-        max-width:240px;
-        font-size:14px;
-    }
-
-    .fototovar, .fototovar  img, .tabltovar, .centr, .centr img{
-        max-width: 98%;
-        margin:0 auto;
-    }
-
-    .text, .contentkorzinu{
-        padding:10px;
-    }
-
-    .dolgiy, .textarea{
-        max-width:220px;
-    }
-
-    .bigleight{
-        float:none;
-    }
-
-    .knopkasubmit{
-        padding:15px 50px;
-    }
-
-}
 
 /*---------- гавнокод -----------*/
 
@@ -1321,14 +1187,13 @@ h2, .centr{
   color: #979191;
 }
 #content {
-background-color: #ffffff;
-	width: 930px;
-	margin: 0 15px;
-	padding: 0 15px;
+
 }
 h1 {
 	font-weight: bold;!important;
 	line-height: 2!important;
+	font-size: 2em!important;
+	margin: 0 0 0.1em!important;
 }
 .container-tovar {
     border: 2px solid #979191!important;
@@ -1351,16 +1216,122 @@ h1 {
 }
 .pagination > li > a {
     background-color: #ffffff;
-    color: #979191;
     border-color: #979191;
+	color: #093;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-right: 10px;
+	font-size: 18px;
+}
+.pagination li a:hover {
+	background: none;
 }
 .pagination .active > span{
-    background-color: #979191;
-    border-color: #979191;;
+	color: #db1a22;
+	margin-right: 10px;
+	font-size: 18px;
 }
 
-/* ---------- PRIVATIK BLOCK ---------- */
+.block-catalog-pruzin {
+	background: white;
+	padding-bottom: 15px;
+}
+.hover-text:hover {
+	color: #db1a22;
+	text-decoration: none;
+}
+.container {
+	width: 990px;
+}
+.nazvatabl a:hover {
+	color: #db1a22;
+}
+.table-bordered{
+	color: black;
+}
+.table-bordered tbody tr td a:hover {
+	color: #db1a22;
+}
+
+.pull-right a:hover{
+	color: black;
+}
+.pull-left a:hover{
+	color: black;
+}
+.pull-left {
+	margin-bottom: 10px;
+}
+.pruzhiny a:hover{
+	color: #f91710;
+}
+.input-group-btn {
+	display: block;
+}
+@media screen and (max-width: 576px) {
+	.container {
+		width: 540px!important;
+		max-width: 100% !important;
+
+	}
+	.table-bordered {
+		font-size: 10px;
+	}
+	.nazvatabl{
+		font-size:13px;
+	}
+	.cenatabl {
+		font-size:13px;
+	}
+	.dolgiy {
+		width: 300px;
+	}
+	.textarea {
+		width: 300px;
+	}
+}
+@media screen and (max-width:1200px){
+	.fotovtabl, .nazvatabl{
+		border-right:none;
+	}
+	.texttabl {
+		text-align: center !important;
+	}
+}
+@media screen and (max-width:360px){
+	.nazvatabl{
+		height: 290px;
+	}
+	.cenatabl {
+		height: 120px;
+	}
+	.pull-left a {
+		font-size: 10px;
+	}
+	.pull-right a {
+		font-size: 10px;
+	}
+	.tabli {
+		font-size: 10px;
+	}
+	.div-img-tovar {
+		width: auto!important;
+	}
+	.dolgiy {
+		width: 200px;
+	}
+	.textarea {
+		width: 200px;
+	}
+	.knopkasubmit {
+		padding: 15px 40px;
+	}
+}
+/*--------- PRIVATIK BLOCK ---------- */
 #disabled {
 	background: grey !important;
 	box-shadow: unset !important;
+}
+.menu .container .text-center >li {
+	display: inline-block;
 }

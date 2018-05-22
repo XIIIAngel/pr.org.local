@@ -18,7 +18,7 @@
         <?php } else { ?>
         <?php $class = 'col-sm-12'; ?>
         <?php } ?>
-        <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+      <div class="container">  <div id="content" style="background: white;" class="<?php echo $class; ?>"><?php echo $content_top; ?>
             <h1><?php echo $heading_title; ?></h1>
 
             <div class="panel panel-default">
@@ -28,7 +28,7 @@
 
                         <form id="cartform" action="index.php?route=checkout/payment_method/save" method="post"
                               enctype="multipart/form-data">
-                            <div class="center-block" style="width: 500px">
+                            <div class="center-block text-center col-lg-12">
                                 <input placeholder="ФИО получателя" class="dolgiy" name="username" type="text">
                                 <br>
                                 <br>
@@ -100,7 +100,7 @@
                 </div>
             </div>
 
-            <?php echo $content_bottom; ?></div>
+            <?php echo $content_bottom; ?></div></div>
         <?php echo $column_right; ?></div>
 </div>
 <script type="text/javascript">
