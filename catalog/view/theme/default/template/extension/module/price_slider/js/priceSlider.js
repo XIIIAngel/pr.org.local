@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
     $("#d").ionRangeSlider({
         grid: true,
         type: "double",
@@ -21,5 +21,19 @@ $( document ).ready(function() {
         min: 10,
         max: 500,
         step: 5
+    });
+
+    $('.bord a').each(function () {
+
+
+        var url = $(this).attr('href');
+        url = url.substring(url.indexOf('?'));
+
+        console.log(url);
+        let regax = new RegExp('^.*' + url + '.*$');
+
+        if (regax.test(window.location)) {
+            $(this).addClass('tutdiag');
+        }
     });
 });

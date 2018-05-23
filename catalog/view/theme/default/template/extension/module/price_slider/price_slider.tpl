@@ -17,7 +17,7 @@
 <div class="diam">
 
     <p class="bord">Диаметр проволоки (мм):
-        <a href="/prugina-rastyageniya.html" class="tutdiag"> Все</a>
+        <a href="<?php echo $action; ?>"> Все</a>
 
         <a href="<?php echo $action; ?>?d=1.0;1.0&D1=0;60&L=10;500">1,0</a>
         <a href="<?php echo $action; ?>?d=1.2;1.2&D1=0;60&L=10;500">1,2</a>
@@ -38,7 +38,7 @@
     </p>
 
     <p class="bord">Диаметр пружины (мм):
-        <a href="<?php echo $action; ?>" class="tutdiag">Все</a>
+        <a href="<?php echo $action; ?>">Все</a>
         <a href="<?php echo $action; ?>?d=0.5;8.0&D1=5;10&L=10;500">5-10</a>
         <a href="<?php echo $action; ?>?d=0.5;8.0&D1=11;15&L=10;500">11-15</a>
         <a href="<?php echo $action; ?>?d=0.5;8.0&D1=16;20&L=10;500">16-20</a>
@@ -49,7 +49,7 @@
     </p>
 
     <p class="bord">Длина пружины (мм):
-        <a href="/prugina-rastyageniya.html" class="tutdiag">Все</a>
+        <a href="<?php echo $action; ?>" >Все</a>
 
         <a href="<?php echo $action; ?>?d=0.5;8.0&D1=0;60&L=26;50">26-50</a>
         <a href="<?php echo $action; ?>?d=0.5;8.0&D1=0;60&L=51;75">51-75</a>
