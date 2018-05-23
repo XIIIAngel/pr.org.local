@@ -24,15 +24,9 @@ $(document).ready(function () {
     });
 
     $('.bord a').each(function () {
-
-
-        var url = $(this).attr('href');
-        url = url.substring(url.indexOf('?'));
-
-        console.log(url);
-        let regax = new RegExp('^.*' + url + '.*$');
-
-        if (regax.test(window.location)) {
+        let href = window.location.href;
+        href = href.substr(0, href.indexOf('page') - 1);
+        if ('http://pr.org.local/' + $(this).attr('href') == (href.length == 0 ? window.location : href) ) {
             $(this).addClass('tutdiag');
         }
     });

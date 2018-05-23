@@ -1,4 +1,7 @@
 <?php echo $header; ?>
+
+
+
 <div class="container">
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
