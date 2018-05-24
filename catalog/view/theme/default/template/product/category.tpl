@@ -32,10 +32,10 @@
             <?php echo $content_top; ?>
 
             <?php if ($categories) { ?>
-            <h3><?php echo $text_refine; ?></h3>
+            <h3 style="display: none"><?php echo $text_refine; ?></h3>
             <?php if (count($categories) <= 5) { ?>
 
-            <div class="row">
+            <div class="row" style="display: none">
                 <div class="col-sm-3">
                     <ul>
                         <?php foreach ($categories as $category) { ?>
@@ -46,7 +46,7 @@
             </div>
             <?php } else { ?>
 
-            <div class="row">
+            <div class="row" style="display: none">
                 <?php foreach (array_chunk($categories, ceil(count($categories) / 4)) as $categories) { ?>
                 <div class="col-sm-3">
                     <ul>

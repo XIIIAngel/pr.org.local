@@ -1,8 +1,14 @@
 <?php echo $header; ?>
 <div class="container">
     <ul class="breadcrumb">
-        <?php for( $i= 0 ; $i < count($breadcrumbs) - 1 ; $i++ ) { ?>
-        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a></li>
+        <?php for( $i= 0 ; $i < count($breadcrumbs); $i++ ) { ?>
+        <li>
+            <?php if ( $i != count($breadcrumbs) - 1 ) { ?>
+            <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumbs[$i]['text']; ?></a>
+            <?php } else { ?>
+            <a disabled><?php echo $breadcrumbs[$i]['text']; ?></a>
+            <?php } ?>
+        </li>
         <?php } ?>
     </ul>
     <div class="row"><?php echo $column_left; ?>
