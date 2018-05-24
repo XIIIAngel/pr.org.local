@@ -285,6 +285,9 @@ class ControllerProductCategory extends Controller
                     if (strpos($attributeValue, 'Количество полных витков пружины') !== false) {
                         $description .= preg_replace('/\(.+\)/', '', $attributeValue);;
                     }
+                    if (strpos($attributeValue, 'Количество полных витков') !== false) {
+                        $description .= preg_replace('/\(.+\)/', '', $attributeValue);;
+                    }
                     if (strpos($attributeValue, 'Торцовка опорных витков') !== false) {
                         $description .= preg_replace('/\(.+\)/', '', $attributeValue);;
                     }
