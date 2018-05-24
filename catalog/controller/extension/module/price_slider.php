@@ -110,8 +110,12 @@ class ControllerExtensionModulePriceSlider extends Controller {
 				$url .= '&filter=' . $this->request->get['filter'];
 			}
 
+
+            $parts = explode('_', (string)$this->request->get['path']);
+
+            $data['category_prefix'] = $parts[0] == 62 ? 's' : 'r';
             $data['action'] = $_GET["_route_"];
-            $data['short_url'] = substr($_GET["_route_"], 0, strrpos($_GET["_route_"], '/'));
+            $data['short_url'] = $this->url->link('product/category', 'path=' . $parts[0]);
 
 			if (!$this->config->get('price_slider_range')) {
 				$range = explode('-', '0-0');
