@@ -26,7 +26,8 @@ $(document).ready(function () {
     $('.bord a').each(function () {
         let href = window.location.href;
         href = href.substr(0, href.indexOf('page') - 1);
-        if ('http://pr.org.local/' + $(this).attr('href') == (href.length == 0 ? window.location : href) ) {
+        let url = $(this).attr('href');
+        if (url == (href.length == 0 ? window.location : href) ) {
             $(this).addClass('tutdiag');
         }
     });

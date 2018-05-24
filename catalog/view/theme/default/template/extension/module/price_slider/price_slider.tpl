@@ -17,11 +17,13 @@
 
     <p class="bord">Диаметр проволоки (мм):
         <a href="<?php echo $short_url; ?>"> Все</a>
+        <?php if( $category_prefix == 's' ) { ?>
         <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-provoloka-0.5">0.5</a>
         <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-provoloka-0.6">0.6</a>
         <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-provoloka-0.7">0.7</a>
         <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-provoloka-0.8">0.8</a>
         <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-provoloka-0.9">0.9</a>
+        <?php } ?>
         <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-provoloka-1.0">1.0</a>
         <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-provoloka-1.2">1.2</a>
         <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-provoloka-1.3">1.3</a>
@@ -46,29 +48,29 @@
 
     <p class="bord">Диаметр пружины (мм):
         <a href="<?php echo $short_url; ?>">Все</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-5-10">5-10</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-11-15">11-15</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-16-20">16-20</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-21-25">21-25</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-26-30">26-30</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-31-35">31-35</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-36-40">36-40</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-41-45">41-45</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-46-50">46-50</a>
-        <a href="<?php echo $short_url; ?>/s-diametr-51-60">51-60</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-5-10">5-10</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-11-15">11-15</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-16-20">16-20</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-21-25">21-25</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-26-30">26-30</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-31-35">31-35</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-36-40">36-40</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-41-45">41-45</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-46-50">46-50</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-diametr-51-60">51-60</a>
     </p>
 
     <p class="bord">Длина пружины (мм):
         <a href="<?php echo $short_url; ?>">Все</a>
-        <a href="<?php echo $short_url; ?>/s-dlina-10-25">10-25</a>
-        <a href="<?php echo $short_url; ?>/s-dlina-26-50">26-50</a>
-        <a href="<?php echo $short_url; ?>/s-dlina-51-75">51-75</a>
-        <a href="<?php echo $short_url; ?>/s-dlina-76-100">76-100</a>
-        <a href="<?php echo $short_url; ?>/s-dlina-101-150">101-150</a>
-        <a href="<?php echo $short_url; ?>/s-dlina-151-200">151-200</a>
-        <a href="<?php echo $short_url; ?>/s-dlina-201-250">201-250</a>
-        <a href="<?php echo $short_url; ?>/s-dlina-251-300">251-300</a>
-        <a href="<?php echo $short_url; ?>/s-dlina-301-400">301-400</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-dlina-10-25">10-25</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-dlina-26-50">26-50</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-dlina-51-75">51-75</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-dlina-76-100">76-100</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-dlina-101-150">101-150</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-dlina-151-200">151-200</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-dlina-201-250">201-250</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-dlina-251-300">251-300</a>
+        <a href="<?php echo $short_url; ?>/<?php echo $category_prefix; ?>-dlina-301-400">301-400</a>
     </p>
 
 </div>
@@ -79,7 +81,7 @@
 </div>
 
 <div data-role="main" class="ui-content">
-    <form id="filter-form" method="get" action="/<?php echo $short_url; ?>">
+    <form id="filter-form" method="get" action="/<?php echo $action; ?>">
         <!-- Ползунок для диаметр проволки -->
         <label for="d">Диаметр проволоки (мм):</label>
         <input type="text" id="d" name="d" value="<?php if(isset($d)) { echo $d[0] . ';' . $d[1]; } ?>"/>
