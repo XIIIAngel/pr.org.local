@@ -111,6 +111,7 @@ class ControllerExtensionModulePriceSlider extends Controller {
 			}
 
             $data['action'] = $_GET["_route_"];
+            $data['short_url'] = substr($_GET["_route_"], 0, strrpos($_GET["_route_"], '/'));
 
 			if (!$this->config->get('price_slider_range')) {
 				$range = explode('-', '0-0');
